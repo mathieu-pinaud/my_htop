@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -Wall -Wextra -Werror
+CFLAGS = -g3 -Wall -Wextra -Werror
 NAME = my_htop
 SRC = main.c list.c sort.c
 OBJ = $(SRC:.c=.o)
