@@ -91,16 +91,15 @@ int main(int ac , char **av) {
     int pad_pos = 0;
 
     int reverse = ac == 3 && strcmp(av[2], "reverse") == 0 ? 1 : 0;
-    t_active_process *data = get_data();
+    t_active_process *data;
     
     while (ch != 'q'){
         data = get_data();
         int total_processes = count_processes(data);
         werase(data_pad);
-        // if (ac > 1) {
-        //     wprintw(data_pad, "Sorting by %s\n", av[1]);
-        //     sort_menu(data, av[1]);
-        // }
+        //if (ac > 1) {
+        //    data = sort_menu(data, av[1]);
+        //}
         print_processes(data, data_pad, reverse);
         prefresh(data_pad, pad_pos, 0, 1, 0, LINES - 1, COLS - 1);
         ch = wgetch(data_pad);

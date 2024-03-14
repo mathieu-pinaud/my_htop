@@ -29,6 +29,6 @@ void free_processes(t_active_process *head);
 void print_processes(t_active_process *head, WINDOW *data_win, int reverse);
 int count_processes(t_active_process *head);
 void swap(t_active_process *a, t_active_process *b);
-void sort_menu(t_active_process *head, char *sort_type);
+t_active_process *sort_menu(t_active_process *head, char *sort_type);
 
 #endif // HTOP_H
